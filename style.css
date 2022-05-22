@@ -1,0 +1,190 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #2a52be;
+}
+
+.memo-container {
+    /* width: calc(100% - px); */
+   
+    margin: 0px auto;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.memory-game {
+/* 420 420
+25 33 */
+
+/* 620 380 
+12.5 33*/
+
+/* 620 420
+11.11 25  */
+/* width: 420px;
+height: 420px; */
+margin: auto;
+margin-bottom: 20px;
+display: flex;
+flex-wrap: wrap;
+perspective: 1000px;
+}
+
+.memory-card {
+
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .1s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.easy {
+    width: calc(25% - 10px); 
+    height: calc(33.333% - 10px);
+
+}
+
+.middle {
+    width: calc(12.5% - 10px); 
+    height: calc(33.333% - 10px);
+}
+
+.advance {
+    width: calc(11.111% - 10px); 
+    height: calc(25% - 10px);
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.control {
+  
+    width: 100%;
+    height: 100px;
+    margin: 0px auto;
+    /* padding: 5px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    
+    
+}
+.start, .select, .clock, .score {
+    border: none;
+    border-radius: 10px;
+    background:cornsilk;
+    font-size: 13px;
+    padding: 5px;
+    font-weight: 600;
+   
+
+}
+
+.score {
+    margin-top: 30px;
+    width: 100%;
+    margin: auto;
+}
+
+.clock {
+    width: 70px;
+}
+
+.start {
+    /* margin-right: 20px; */
+
+}
+
+@media (min-width: 1500px) {
+    .memo-container {
+    width: 620px;
+    height: 100vh;
+
+    }
+}
+ 
+
+@media (max-width: 1500px) {
+    .memo-container {
+    width: 620px;
+    height: 100vh;
+
+    }
+}
+  
+ 
+
+@media (max-width: 730px) {
+    .memo-container {
+        width: 520px;
+        height: 80vh;
+    
+        }
+  
+   
+}   
+
+
+
+@media (max-width: 550px) {
+    .memo-container {
+        width: 420px;
+        height: 60vh;
+    
+        }
+} 
+ 
+@media (max-width: 450px) {
+
+    .memo-container {
+        width: 320px;
+        height: 50vh;
+    }
+
+
+}
+
+@media (max-width: 320px) {
+    .memo-container {
+        width: 270px;
+        height: 40vh;
+    }
+
+
+}
+ 
+
+
+
+
